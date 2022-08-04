@@ -156,7 +156,7 @@ const sessionConfig = {
         pool: pool,
         tableName: 'session',
     }),
-    secret: process.env.COOKIE_SECRET, //used to encrypt the cookie 
+    secret: process.env.COOKIE_SECRET_ONE, //used to encrypt the cookie 
     resave: false,                     // set to flase - forces session to be saved back to the session store
     key: "test.cookie",
     cookie: {
