@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+require('dotenv').config();
 const pool = require('./database')
 const bcrypt = require('bcrypt')
 const session = require('express-session')
@@ -9,7 +10,6 @@ const path = require('path')
 const util = require('util')
 const fs = require('fs-extra')
 const unlinkFile = util.promisify(fs.unlink)
-require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
 const app = express();
