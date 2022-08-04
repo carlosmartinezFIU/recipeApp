@@ -1,0 +1,141 @@
+.foodcard-wrapper{
+    width: 250px;
+    border-radius: 11px;
+    overflow: hidden;
+    height: 342px;
+
+    box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.75);
+    margin-bottom: 54px;
+    position: relative;
+}
+
+.food-view-btn{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px; 
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.food-view-btn:hover{
+    background: #3EC70B;
+}
+
+
+.description-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.food-logo{
+    width: 100%;
+    height: 100%;
+}
+
+.description-container-one{
+    text-align: left;
+    font-weight: 500;
+}
+
+.description-container-two{
+    width: 37px;
+}
+
+.food-img-container{
+    height: 194px;
+}
+
+.food-card-minutes-container{
+    display: flex;
+    width: 144px;
+    justify-content: space-between;
+}
+
+.top-one p{
+    margin-bottom: 0px;
+}
+
+.food-card-image-pointer{
+    cursor: pointer;
+}
+
+.likes-comment-food-card-container{
+    display: flex;
+}
+
+.comment-container, .likes-container{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-container svg{
+    width: 27px;
+    height: 20px;
+}
+.comment-container p{
+    margin-top: 22.5px;
+}
+
+.likes-container svg{
+    width: 27px;
+    height: 20px;
+}
+.likes-container p{
+    margin-top: 22.5px;
+}
+
+.heart-food-card-logo{
+    filter: invert(25%) sepia(85%) saturate(2393%) hue-rotate(346deg) brightness(87%) contrast(89%);
+}
+
+.heart, .comment{
+    cursor: pointer;
+}
+
+
+.food-card-delete-btn{
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+
+.view-comment-title{
+    margin: 0px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px){
+    .foodcard-wrapper{
+        width: 382px;
+        height: 268px;
+        margin: auto;
+        margin-bottom: 23px;
+    }
+
+    .food-img-container{
+        height: 162px;
+    }
+
+    .description-container{
+        height: 47px;
+    }
+
+    .description-container-one{
+        display: flex;
+        width: 243px;
+        justify-content: space-between;
+    }
+}

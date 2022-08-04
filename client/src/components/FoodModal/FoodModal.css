@@ -1,0 +1,202 @@
+.food-modal{
+    width: 1091px;
+    height: 450px;
+
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    background-color: #fff;
+}
+
+.food-modal-input{
+    border-radius: 5px;
+    height: 36px;
+    margin-left: 43px;
+}
+
+.food-modal-form-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+
+.form-top-description-container{
+    width:100%;
+    display: flex;
+}
+
+.food-modal-image-label{
+    position: relative;
+    top: -49px;
+}
+
+.image-logo{
+    width: 80px;
+    height: 80px;
+    margin-left: 94px;
+    margin-top: 17px;
+    cursor: pointer;
+
+    position: relative;
+    top: 49px;
+}
+.image-logo:hover{
+    filter: invert(40%) sepia(61%) saturate(3075%) hue-rotate(0deg) brightness(101%) contrast(106%);
+}
+
+.food-modal-name-label{
+    margin-left: 80px;
+    margin-top: 24px;
+}
+
+.modal-time-logo-input-container{
+    text-align: initial;
+    margin-top: 25px;
+}
+
+.food-modal-input-hour{
+    margin-left: 106px;
+    height: 30px;
+    width: 47px; 
+}
+
+.food-modal-input-minute{
+    height: 30px;
+    width: 47px; 
+    margin-left: 8px;
+}
+
+
+.food-modal-logo-label{
+    margin-left: 106px;
+}
+
+.modal-description-label{
+    height: auto;
+    display: flex;
+    margin-top: 48px;
+}
+
+.description-textarea{
+    width: 450px;
+    margin-left: 50px;
+    height: 150px;
+}
+
+.food-modal-input-logo{
+    margin-left: 50px;
+    height: 36px;
+}
+
+/*
+font-size: 19px;
+font-weight: 600;
+*/
+
+.food-modal-image-label, .food-modal-name-label,
+.food-modal-time-label, .food-modal-logo-label,
+.modal-description-label{
+    font-size: 19px;
+    font-weight: 600;
+    color: grey;
+}
+
+.food-modal-save-button{
+    margin-top: 24px;
+    margin-left: -188px;
+    height: 38px;
+    width: 147px;
+    background-color: #FF5B00;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-left-container{
+    width: 616px;
+
+}
+
+.form-right-container{
+    width: 47%;
+}
+
+.modal-ingredients-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 19px;
+    font-weight: 600;
+    color: grey;
+}
+
+.ingredients-textarea{
+    width: 300px;
+    height: 300px;
+    margin-top: 49px;
+}
+
+@media screen and (max-width: 550px){
+    .food-modal{
+        width: 373px;
+        overflow: scroll;
+    }
+
+    .form-top-description-container{
+        flex-direction: column;
+        width: 336px;
+    }
+
+    .food-modal-image-label{
+        top: -51px;
+        left: -83px;
+    }
+    .image-logo{
+        margin-left: 38px;
+    }
+
+    .food-modal-name-label{
+        justify-content: flex-start;
+        display: flex;
+        margin-left: 0px;
+    }
+
+    .food-modal-input-hour{
+        margin-left: 49px;
+    }
+
+    .food-modal-form-container{
+        flex-direction: column;
+    }
+
+    .modal-description-label{
+        display: flex;
+        flex-direction: column;
+
+        width: 334px;
+    }
+
+    .form-left-container{
+        width: 373px;
+        margin-bottom: 29px;
+    }
+
+    .description-textarea{
+        width: 332px;
+        margin-left: 0px;
+    }
+
+    .food-modal-save-button{
+        margin-left: 0px;
+    }
+
+    .modal-ingredients-label{
+        width: 335px;
+    }
+}

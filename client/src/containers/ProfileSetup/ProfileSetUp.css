@@ -1,0 +1,63 @@
+.profile-setup-wrapper{
+    height: 100vh;
+    display: flex;
+    background-color: #000;
+}
+
+.profile-setup-form-container{
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    box-shadow: 0px 11px 17px 0px rgba(6,255,0,1);
+    border-radius: 9px;
+}
+
+.form-profile-setup{
+    display: flex;
+    height: 85%;
+}
+
+.profile-setup-label{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-top: 44px;
+    color: #06FF00;
+}
+
+.left-profile-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.right-profile-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.input-profile-setup{
+    height: 43px;
+    border-radius: 8px;
+    width: 300px;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    padding-left: 14px;
+}
+
+.profile-setup-save-btn{
+    width: 300px;
+    height: 38px;
+    border: none;
+    border-radius: 6px;
+    background: #06FF00;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+.comment-modal{
+        width: 400px;
+        height: 450px;
+        margin: auto;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid white;
+        background-color: #fff;
+        overflow: scroll;
+    }
+
+    .hr-name-line-comment{
+        width: 314px;
+    }
+
+    .comment-like-container{
+        height: auto;
+        border-bottom: 1px solid #A9A9A9;
+        width: 302px;
+        text-align: initial;
+        margin-top: 21px;
+    }
+
+    .comment-like-container p{
+        margin: 0px;
+        font-family: 'Arimo', sans-serif;
+    }
