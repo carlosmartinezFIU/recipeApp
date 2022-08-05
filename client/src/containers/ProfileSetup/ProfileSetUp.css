@@ -1,14 +1,13 @@
 .profile-setup-wrapper{
     height: 100vh;
     display: flex;
-    background-color: #000;
+    background-color: #f5f5f7;
 }
 
 .profile-setup-form-container{
     width: 700px;
     height: 500px;
     margin: auto;
-    box-shadow: 0px 11px 17px 0px rgba(6,255,0,1);
     border-radius: 9px;
 }
 
@@ -24,7 +23,7 @@
     font-weight: 600;
     letter-spacing: 0.4px;
     margin-top: 44px;
-    color: #06FF00;
+    color: #FF5B00;
 }
 
 .left-profile-container{
@@ -54,10 +53,19 @@
     height: 38px;
     border: none;
     border-radius: 6px;
-    background: #06FF00;
+    background: #FF5B00;
     font-weight: 700;
     cursor: pointer;
 }
 
 
+@media screen and (max-width: 550px) {
+    .profile-setup-form-container{
+        width: 326px;
+    }
 
+    .form-profile-setup{
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
+}

@@ -5,12 +5,13 @@
 .sign-up-left-container{
     width: 50%;
     height: 100vh;
-    background-color:#06FF00;
+    background-color: #FF5B00;
+    overflow: hidden;
 }
 .sign-up-right-container{
     width: 50%;
     height: 100vh;
-    background-color: #000;
+    background-color: #f5f5f7;
     display: flex;
 }
 
@@ -22,7 +23,7 @@
 }
 
 .email-label{
-    color: #06FF00;
+    color: #FF5B00;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -31,8 +32,8 @@
 .email-label input{
     background: transparent;
     border: none;
-    border-bottom: 1px solid white;
-    color: white;
+    border-bottom: 1px solid grey;
+    color: #000;
     height: 39px;
     font-size: 18px;
     outline: none;
@@ -41,7 +42,7 @@
 
 
 .password-label{
-    color: #06FF00;
+    color: #FF5B00;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -52,8 +53,8 @@
 .password-label input{
     background: transparent;
     border: none;
-    border-bottom: 1px solid white;
-    color: white;
+    border-bottom: 1px solid grey;
+    color: #000;
     height: 39px;
     font-size: 18px;
     outline: none;
@@ -62,7 +63,7 @@
 .sign-up-welcome-title{
     font-weight: 300;
     font-size: 51px;
-    color: #06FF00;
+    color: #FF5B00;
     margin-bottom: 40px;
 }
 
@@ -80,4 +81,30 @@
     width: 73px;
     border-radius: 9px;
     cursor: pointer;
+
+    background: transparent;
+    border: none;
+    color: #FF5B00;
+    font-size: 16px;
+}
+
+.incorrect-sign-title{
+    color: red;
+}
+
+.react-player video{
+    object-fit: cover;
+}
+
+@media screen and (max-width: 550px){
+    .sign-up-left-container{
+        display: none;
+    }
+
+    .sign-up-right-container{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: 150px;
+    }
 }

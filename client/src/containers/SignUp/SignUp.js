@@ -3,6 +3,9 @@ import './SignUp.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
+import ReactPlayer from 'react-player'
+import pizzaVideo from '../../asset/pizzaVid.mp4'
+
 
 /**
  * Sign in/Log in page checks if user has an email and comapres password from the server
@@ -11,6 +14,9 @@ import { useNavigate } from 'react-router-dom'
 const SignUp = () => {
     const [userEmail, setEmail] = useState('')
     const [userPassword, setPassword] = useState('')
+    const [incorrectSign, setIncorrectSign] = useState(false)
+    const [disableBtn, setDisableBtn] = useState(false)
+    const [emailExist, setEmailExist] = useState(false)
     const nav = useNavigate()
     axios.defaults.withCredentials = true
 
@@ -20,6 +26,30 @@ const SignUp = () => {
 // Sends email and password to be stored in the database
     const handleSignIn = async e =>{
         e.preventDefault();
+
+        if(!userEmail){
+            setIncorrectSign(true)
+            setTimeout(() => {
+                setIncorrectSign(false)
+            }, 5000)
+            return
+        }
+        else if(!emailVarification()){
+            setIncorrectSign(true)
+            setTimeout(() => {
+                setIncorrectSign(false)
+            }, 5000)
+            return
+        }
+
+        if(!userPassword){
+            setIncorrectSign(true)
+            setTimeout(() => {
+                setIncorrectSign(false)
+            }, 5000)
+            return
+        }
+        
 
         const params = {
             Email: userEmail,
@@ -32,15 +62,56 @@ const SignUp = () => {
             if(request === true){
                 nav('/profile-setup')
             }
-            console.log(result.data.Message)
+            if(request === false){
+                setEmailExist(true)
+                setTimeout(() => {
+                    setDisableBtn(false)
+                    setEmailExist(false)
+                }, 3000)
+
+                setTimeout(() => {
+                    setEmailExist(false)
+                }, 5000)
+            }
+            
+
+
         } catch (error) {
             console.log(error)
         }
+
+        
     }
 
 // Logs the user in, if email and password match 
     const handleLogIn = async e =>{
         e.preventDefault();
+
+        if(!userEmail){
+            setIncorrectSign(true)
+            setTimeout(() => {
+                setIncorrectSign(false)
+            }, 5000)
+            return
+        }
+        else if(!emailVarification()){
+            setIncorrectSign(true)
+            setTimeout(() => {
+                setIncorrectSign(false)
+            }, 5000)
+            return
+        }
+
+        if(!userPassword){
+            setIncorrectSign(true)
+            setTimeout(() => {
+                setIncorrectSign(false)
+            }, 5000)
+            return
+        }
+
+
+
 
         const params = {
             userEmail,
@@ -59,13 +130,25 @@ const SignUp = () => {
         }
     }
 
+        // Varification of email structure
+        const emailVarification = () => {
+            const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    
+            if(regex.test(userEmail) === false){
+                return false;
+            }
+            else
+                return true
+        }
+
 
 
 
   return (
     <div className='sign-up-wrapper'>
         <div className='sign-up-left-container'>
-            <h1>Upload your recipes</h1>
+            <ReactPlayer className='react-player' width='100%' height='100%' 
+            playing url={pizzaVideo} />
         </div>
         <div className='sign-up-right-container'>
 
@@ -82,9 +165,12 @@ const SignUp = () => {
                 </form>
 
                 <div className='sign-up-btns-container'>
-                    <button onClick={(e) => {handleSignIn(e)}}>Sign Up</button>
+                    <button disabled={disableBtn} onClick={(e) => {handleSignIn(e); setDisableBtn(true)}}>Sign Up</button>
                     <button onClick={(e) => {handleLogIn(e)}}>Log In</button>
                 </div>
+
+                {incorrectSign && <p className='incorrect-sign-title'>Incorrect Email/Password</p>}
+                {emailExist && <p className='incorrect-sign-title'>Email exist</p>}
             </div>
 
         </div>

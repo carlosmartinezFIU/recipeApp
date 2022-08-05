@@ -24,7 +24,7 @@ const httpServer = createServer(app)
 // Creates new Server
 const io = new Server(httpServer, {
     cors: {
-        origin: ['http://localhost:3000','http://localhost:5000']
+        origin: [process.env.PORT,'https://food-recipe-card-app.herokuapp.com']
     }
 })
 
@@ -135,7 +135,7 @@ io.on('connection', (socket) => {
 
 
 app.use(cors({
-    origin: ['http://localhost:3000','http://localhost:5000', process.env.PORT],
+    origin: [process.env.PORT, 'https://food-recipe-card-app.herokuapp.com'],
     credentials: true,
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'DELETE']
 }))
@@ -241,7 +241,7 @@ app.post('/sign-up', async (req,res) => {
     }
     
    } else {
-     console.log("There is an account with that email")
+     res.json({Message: false})
    }
 
 })

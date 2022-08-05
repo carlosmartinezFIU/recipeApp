@@ -33,5 +33,4 @@ const devConfig = {
 
 const pool = new Pool(devConfig)
 module.exports = pool
-
 */
