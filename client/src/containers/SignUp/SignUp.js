@@ -73,9 +73,6 @@ const SignUp = () => {
                     setEmailExist(false)
                 }, 5000)
             }
-            
-
-
         } catch (error) {
             console.log(error)
         }
@@ -109,10 +106,6 @@ const SignUp = () => {
             }, 5000)
             return
         }
-
-
-
-
         const params = {
             userEmail,
             userPassword
@@ -140,8 +133,6 @@ const SignUp = () => {
             else
                 return true
         }
-
-
 
 
   return (
