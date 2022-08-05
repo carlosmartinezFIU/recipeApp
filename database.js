@@ -1,6 +1,6 @@
 const Pool = require('pg').Pool
 require('dotenv').config()
-
+/*
 const url = require('url')
 
 
@@ -19,10 +19,10 @@ const config = {
 const pool = new Pool(config);
 module.exports = pool
 
+*/
 
 
 
-/*
 const devConfig = {
     user: process.env.PG_USER,
     password: process.env.PG_PASSWORD,
@@ -34,4 +34,4 @@ const devConfig = {
 
 const pool = new Pool(devConfig)
 module.exports = pool
-*/
+

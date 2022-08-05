@@ -45,6 +45,20 @@ const Home = () => {
   axios.defaults.withCredentials = true
   const PORT = process.env.PORT
 
+  
+const closedWindow = async () => {
+    const params = {
+      message: "Window was closed"
+    }
+  try {
+    await axios.post('/window-closed', params)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+
 // creates a new socket connection with refresh
   useEffect(() => {
     setSocket(io(PORT)) 

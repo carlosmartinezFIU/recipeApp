@@ -20,6 +20,9 @@ const SignUp = () => {
     const nav = useNavigate()
     axios.defaults.withCredentials = true
 
+    window.addEventListener('beforeunload', event =>{
+        event.preventDefault()
+    })
 
 
 

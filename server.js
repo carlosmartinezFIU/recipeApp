@@ -24,7 +24,7 @@ const httpServer = createServer(app)
 // Creates new Server
 const io = new Server(httpServer, {
     cors: {
-        origin: [process.env.PORT, 'https://food-recipe-card-app.herokuapp.com']
+        origin: ['http://localhost:3000' ,'http://localhost:5000']
     }
 })
 
@@ -139,7 +139,7 @@ io.on('connection', (socket) => {
 // 'process.env.PORT', 'https://food-recipe-card-app.herokuapp.com'
 
 app.use(cors({
-    origin: [process.env.PORT, 'https://food-recipe-card-app.herokuapp.com'],
+    origin: ['http://localhost:3000' ,'http://localhost:5000'],
     credentials: true,
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'DELETE']
 }))
@@ -212,6 +212,10 @@ const cleanCookie = (cookieData) =>{
     return finalCookie;   
 }
 //exports.cleanCookie = cleanCookie
+
+app.post('/window-closed', (req,res) => {
+    console.log(req.body)
+})
 
 
 
