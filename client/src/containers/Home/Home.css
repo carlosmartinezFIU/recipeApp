@@ -77,6 +77,7 @@ img{
     font-size: 19px;
     cursor: pointer;
     font-weight: 500;
+    color: #000;
 }
 
 .navigation-profile-btn-contianer button:hover{

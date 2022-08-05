@@ -31,8 +31,10 @@
 }
 .email-label input{
     background: transparent;
-    border: none;
-    border-bottom: 1px solid grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.5px solid black;
     color: #000;
     height: 39px;
     font-size: 18px;
@@ -52,8 +54,10 @@
 }
 .password-label input{
     background: transparent;
-    border: none;
-    border-bottom: 1px solid grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.5px solid black;
     color: #000;
     height: 39px;
     font-size: 18px;
@@ -78,7 +82,7 @@
 }
 .sign-up-btns-container button{
     height: 35px;
-    width: 73px;
+    width: 86px;
     border-radius: 9px;
     cursor: pointer;
 
