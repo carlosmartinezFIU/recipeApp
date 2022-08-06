@@ -24,11 +24,11 @@ const httpServer = createServer(app)
 // Creates new Server
 const io = new Server(httpServer, {
     cors: {
-        origin: ['http://localhost:3000' ,'http://localhost:5000']
+        origin: [process.env.PORT,'https://food-recipe-card-app.herokuapp.com']
     }
 })
 
-//process.env.PORT,'https://food-recipe-card-app.herokuapp.com
+//process.env.PORT,'https://food-recipe-card-app.herokuapp.com'
 
 
 // Array to hold user email with socket id's
@@ -139,7 +139,7 @@ io.on('connection', (socket) => {
 // 'process.env.PORT', 'https://food-recipe-card-app.herokuapp.com'
 
 app.use(cors({
-    origin: ['http://localhost:3000' ,'http://localhost:5000'],
+    origin: [process.env.PORT,'https://food-recipe-card-app.herokuapp.com'],
     credentials: true,
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'DELETE']
 }))
