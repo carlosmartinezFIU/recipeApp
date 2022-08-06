@@ -21,8 +21,6 @@ const SignUp = () => {
     axios.defaults.withCredentials = true
 
 
-
-
 // Sends email and password to be stored in the database
     const handleSignIn = async e =>{
         e.preventDefault();
