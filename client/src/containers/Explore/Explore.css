@@ -36,11 +36,14 @@
 
 @media screen and (max-width: 550px){
     .explore-recipe-container{
-        width: 430px;
+        width: auto;
         display: flex;
         flex-direction: column;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
         padding-left: 0px;
+        justify-content: center;
     }
+
+
 }
